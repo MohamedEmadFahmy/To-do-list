@@ -13,24 +13,49 @@ body{
     
 }
 #inputField{
-    width: 500px;
+    width: 680px;
     height: 46px;
-    border: 1px solid black;
+    border: 1px hidden black;
     outline: none;
     font-size: 25px;
     vertical-align: middle;
     border-radius: 0.5cm;
-    background-color: #061825;
+    background-color: #222e36;
     color: white;
     text-indent: 10px;
 }
-#Button{
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    font-size: 30px;
+#addTask{
+    width: 90px;
+    height: 40px;
+    border: hidden;
+    font-size: 18px;
+    text-align: center;
     vertical-align: middle;
     margin-left: 0.5cm;
+    background-color: #154c79;
+    color: white;
+}
+#addTask:hover{
+    color: red;
+}
+.editTask{
+    border: hidden;
+    font-size: 18px;
+    text-align: center;
+    margin-right: 5px;
+    background-color: #154c79;
+    color: white;
+    position: relative;
+    top: 7px;
+}
+.deleteTask{
+    border: hidden;
+    font-size: 18px;
+    text-align: center;
+    background-color: #154c79;
+    color: white;
+    position: relative;
+    top: 7px;
 }
 .notes{
     margin-top: 25px;
@@ -40,23 +65,38 @@ body{
     cursor: pointer;
     font-size: 20px;
 }
-.currentnote{
-    background-color: aqua;
+.taskBox{
+    background-color: #111827;
+    margin-top: 5px;
+    height: 40px;
+    border-radius: 0.5cm;
+    text-indent: 15px;
+}
+.taskBox .noteText{
+    color: white;
+    position: relative;
+    top: 7px;
+    width: 600px;
+    background-color: red;
+    display: inline-block;
+    margin-right: 50px;
 }
 h1{
     font-family: "LEMON MILK";
     letter-spacing: 0.2cm;
     color: beige;
 }
-p#addTask{
+/* p#addTask{
     display: inline-block;
     background-color: red;
     font-size: 20px;
     cursor: pointer;
-}
-p#addTask:hover{
+    width: 100px;
+    height: 100px;
+} */
+/* p#addTask:hover{
     background-color: blue;
-}
+} */
 /* input::placeholder{
     padding-left: 3px;
 } */
