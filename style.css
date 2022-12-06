@@ -20,7 +20,7 @@ body{
     font-size: 25px;
     vertical-align: middle;
     border-radius: 0.5cm;
-    background-color: #222e36;
+    background-color: #192127;
     color: white;
     text-indent: 10px;
 }
@@ -31,31 +31,44 @@ body{
     font-size: 18px;
     text-align: center;
     vertical-align: middle;
-    margin-left: 0.5cm;
+    margin-left: 0.3cm;
     background-color: #154c79;
-    color: white;
+    color: rgba(255, 12, 255, 0.7);
+    font-weight: bold;
 }
 #addTask:hover{
-    color: red;
+    color: rgb(255, 12, 255, 0.7);
+    text-shadow: 0.3px 0.3px 3px rgb(255, 12, 255, 1);
 }
 .editTask{
     border: hidden;
     font-size: 18px;
     text-align: center;
-    margin-right: 5px;
-    background-color: #154c79;
-    color: white;
+    margin-right: 7px;
+    background-color: #111827;
+    color: rgba(255, 12, 255, 0.7);
+    font-weight: bold;
     position: relative;
     top: 7px;
+}
+.editTask:hover{
+    color: rgb(255, 12, 255, 0.7);
+    text-shadow: 0.3px 0.3px 3px rgb(255, 12, 255, 1);
 }
 .deleteTask{
     border: hidden;
     font-size: 18px;
     text-align: center;
-    background-color: #154c79;
-    color: white;
+    background-color: #111827;
+    color: rgb(255, 0, 0, 0.7);
+    font-weight: bold;
     position: relative;
     top: 7px;
+    transition: all 0.15s ease-in-out;
+}
+.deleteTask:hover{
+    color: rgb(255, 0, 0, 1);
+    text-shadow: 0.3px 0.3px 3px rgba(255, 0, 0, 1);
 }
 .notes{
     margin-top: 25px;
@@ -74,17 +87,28 @@ body{
 }
 .taskBox .noteText{
     color: white;
+    background-color: #111827;
+    border: hidden;
     position: relative;
     top: 7px;
     width: 600px;
-    background-color: red;
+    /* background-color: red; */
     display: inline-block;
     margin-right: 50px;
+    cursor: default;
+}
+.taskBox .noteText:focus{
+    outline: 0;
+}
+h1,h2{
+    font-family: "LEMON MILK";
+    color: beige;
 }
 h1{
-    font-family: "LEMON MILK";
     letter-spacing: 0.2cm;
-    color: beige;
+}
+h2{
+    letter-spacing: 0.1cm;
 }
 /* p#addTask{
     display: inline-block;

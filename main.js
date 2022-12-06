@@ -7,12 +7,14 @@ addTask.addEventListener("click", function(){
     // if(inputField.value != ""){
         let taskBox = document.createElement('div');
         taskBox.classList.add("taskBox");
-        let paragraph = document.createElement('p');
-        paragraph.classList.add("noteText");
-        paragraph.classList.add("paragraph-styling");
-        paragraph.innerHTML = inputField.value;
-        notesContainer.appendChild(taskBox);
-        taskBox.appendChild(paragraph);
+        let noteText = document.createElement('input');
+        noteText.disabled = true;
+        noteText.classList.add("noteText");
+        noteText.classList.add("paragraph-styling");
+        noteText.value = inputField.value;
+        // notesContainer.appendChild(taskBox);
+        notesContainer.insertBefore(taskBox,notesContainer.firstChild);
+        taskBox.appendChild(noteText);
         let editButton  = document.createElement("button");
         editButton.classList.add("editTask");
         editButton.innerHTML = "Edit";
@@ -23,16 +25,43 @@ addTask.addEventListener("click", function(){
         taskBox.appendChild(deleteButton);
         inputField.value = "";
         inputField.focus();
-    // }s
+
+
+
+        editButton.addEventListener("click", function(){
+            if(editButton.innerText.toLowerCase() == "edit"){
+                noteText.disabled = false;
+                noteText.focus();
+                noteText.style.color = "Red";
+                editButton.innerText = "Save";
+                editButton.style.marginRight = "0px"; 
+            }
+            else{
+                noteText.disabled = false;
+                noteText.style.color = "White";
+                inputField.focus();
+                editButton.innerText = "Edit";
+                editButton.style.marginRight = "7px";
+            }
+            
+        });
+    // }
 
     deleteButton.addEventListener("click", function(){
         notesContainer.removeChild(taskBox);
         inputField.value = "";
         inputField.focus();
     })
+
+
 });
 document.addEventListener('keypress', (event)=>{
     if(event.key === "Enter") {
       addTask.click();
     }
 });
+// document.addEventListener('keypress', (event)=>{
+//     if(event.key === "Delete") {
+//       deleteButton.click();
+//     }
+// });
