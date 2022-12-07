@@ -32,7 +32,7 @@ addTask.addEventListener("click", function(){
             if(editButton.innerText.toLowerCase() == "edit"){
                 noteText.disabled = false;
                 noteText.focus();
-                noteText.style.color = "Red";
+                noteText.style.color = "rgba(255, 12, 255, 1)";
                 editButton.innerText = "Save";
                 editButton.style.marginRight = "0px"; 
             }
